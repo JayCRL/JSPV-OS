@@ -1,0 +1,27 @@
+# 每秒指令数，Bochs 3.0 建议值
+cpu: count=1, ips=15000000
+
+# 内存大小
+megs: 32
+
+# 关键：必须同时指定 BIOS 和 VGA BIOS
+romimage: file="C:\Program Files\Bochs-3.0\BIOS-bochs-legacy"
+#vgaromimage: file="C:\Program Files\Bochs-3.0\VGABIOS-lgpl-latest"
+
+# 软盘设置：指向你编译出的 bin 文件
+floppya: 1_44="C:\Users\25566\CLionProjects\jspv-os\boot.bin", status=inserted
+
+# 启动介质
+boot: a
+
+# 显示库和键盘映射
+display_library: win32
+keyboard: keymap="C:\Program Files\Bochs-3.0\keymaps\x11-pc-us.map"
+
+# 日志输出，黑屏时查看此文件非常有用
+log: bochsout.txt
+
+# 调试开关
+magic_break: enabled=0
+port_e9_hack: enabled=1
+mouse: enabled=0
